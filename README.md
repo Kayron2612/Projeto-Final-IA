@@ -41,3 +41,50 @@ README.md
 requirements.txt
 
 # Passo a passo para execução
+
+### 1. Preparar o ambiente
+No Google Colab, ativar a GPU em:
+  Runtime → Change runtime type → Hardware Accelerator → GPU
+
+  
+### 2.Instalar dependências:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install 'git+https://github.com/facebookresearch/detectron2.git'
+pip install opencv-python
+```
+### 3. Organizar o dataset
+As imagens do campus e os arquivos de anotação no formato COCO JSON devem ser colocados em:
+data/images/
+data/annotations/_annotations.coco.json
+
+### 4. Treinar o modelo
+Execute:
+python training/train.py
+O modelo treinado será salvo em:
+training/output/model_final.pth
+
+### 5. Executar inferência e métricas
+
+python inference/test_model.py
+
+# Exemplos de Resultados
+
+![Detecção de Pessoas em uma sala ocupada(results/images/Captura de tela 2026-01-21 142239.png)]
+
+![Detecção de Pessoas em uma sala vazia(results/images/Captura de tela 2026-01-21 142432.png)]
+
+# Aplicação em Segurança da Informação
+
+A aplicação desse trabalho na área de segurança da informação pode ser aproveitado para proteção de ambientes fisicos, onde estão localizados os ativos, e uma gestão de áreas.
+
+Este projeto contribui para a Segurança da Informação ao permitir:
+
+- Monitoramento de acesso físico
+- Identificação de presença em áreas restritas
+- Controle de ocupação de ambientes
+- Geração de logs de auditoria
+
+Ao detectar automaticamente a presença de pessoas, o sistema funciona como um componente de um sistema de vigilância inteligente, podendo apoiar decisões de segurança, prevenção de acessos indevidos e análise de incidentes.
+
+Assim, o projeto integra Inteligência Artificial e Segurança da Informação para criar uma solução moderna de monitoramento físico.
