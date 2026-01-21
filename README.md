@@ -70,9 +70,9 @@ python inference/test_model.py
 
 # Exemplos de Resultados
 
-![Detecção de Pessoas em uma sala ocupada(results/images/Captura de tela 2026-01-21 142239.png)]
+(results/images/ocp.png)
 
-![Detecção de Pessoas em uma sala vazia(results/images/Captura de tela 2026-01-21 142432.png)]
+(results/images/vz.png)
 
 # Aplicação em Segurança da Informação
 
