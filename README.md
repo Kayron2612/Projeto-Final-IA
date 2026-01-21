@@ -70,9 +70,9 @@ python inference/test_model.py
 
 # Exemplos de Resultados
 
-![Detecção de Sala ocupada](results/images/ocp.png)
+![Detecção de Sala ocupada](results/images/ocp.jpeg)
 
-![Detecção de Sala Vazia](results/images/vz.png)
+![Detecção de Sala Vazia](results/images/vz.jpeg)
 
 # Aplicação em Segurança da Informação
 
